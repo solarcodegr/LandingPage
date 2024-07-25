@@ -1,0 +1,94 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #FFFFFF;
+    color: #333;
+    text-align: center; /* Center text for better alignment on smaller screens */
+}
+
+h1 {
+    font-size: 2.7em;
+    margin: 0.5em 0;
+    color: #0086FF;
+}
+
+.soon {
+    font-size: 2em;
+    margin: 1em 0;
+    color: #06044B;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-links a {
+    font-size: 2em;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 100%;
+    height: 70%; /* Change height to auto for better scaling on smaller screens */
+    background-image: url('../assets/images/logo.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Make social icons more responsive */
+.social-icon {
+    width: 32px; /* Adjust size as needed */
+    height: 32px; /* Adjust size as needed */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em; /* Smaller font size for smaller screens */
+    }
+
+    .soon {
+        font-size: 1.5em; /* Smaller font size for smaller screens */
+    }
+
+    .social-links {
+        flex-direction: column; /* Stack social icons vertically on smaller screens */
+        gap: 10px;
+    }
+
+    .social-links a {
+        font-size: 1.5em; /* Smaller font size for social icons */
+    }
+
+    .logo {
+        height: 40%; /* Adjust height for logo */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em; /* Further reduce font size for very small screens */
+    }
+
+    .soon {
+        font-size: 1.2em; /* Further reduce font size for very small screens */
+    }
+
+    .social-links a {
+        font-size: 1.2em; /* Further reduce social icon size */
+    }
+
+    .logo {
+        height: 30%; /* Further adjust logo height */
+    }
+}
