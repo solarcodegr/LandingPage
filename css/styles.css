@@ -49,6 +49,12 @@ h1 {
 .social-icon {
     width: 32px; /* Adjust size as needed */
     height: 32px; /* Adjust size as needed */
+    transition: transform 0.1s ease; /* Smooth transition */
+
+}
+
+.social-links a:hover .social-icon {
+    animation: bounce 1s; /* Apply bounce animation */
 }
 
 /* Media Queries */
@@ -62,7 +68,6 @@ h1 {
     }
 
     .social-links {
-        flex-direction: column; /* Stack social icons vertically on smaller screens */
         gap: 10px;
     }
 
@@ -92,3 +97,16 @@ h1 {
         height: 30%; /* Further adjust logo height */
     }
 }
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
