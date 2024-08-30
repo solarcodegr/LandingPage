@@ -1,112 +1,113 @@
 body {
+    padding: 50px auto;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    background-color: #FFFFFF;
-    color: #333;
-    text-align: center; /* Center text for better alignment on smaller screens */
+    gap: 100px;
 }
 
-h1 {
-    font-size: 2.7em;
-    margin: 0.5em 0;
-    color: #0086FF;
-}
-
-.soon {
-    font-size: 2em;
-    margin: 1em 0;
-    color: #06044B;
-}
-
-.social-links {
+nav {
+    width: 80vw;
     display: flex;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.social-links a {
-    font-size: 2em;
-    text-decoration: none;
-    display: flex;
+    justify-content: space-between;
     align-items: center;
 }
+
+button {
+    border-radius: 5px;
+    background-color: darkblue;
+    color: white;
+    border: 0px;
+    height: 30px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.geologica-font {
+    font-family: "Geologica", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0,
+      "CRSV" 0,
+      "SHRP" 0;
+  }
 
 .logo {
-    width: 100%;
-    height: 50%; /* Change height to auto for better scaling on smaller screens */
+    /* background-color: red; */
     background-image: url('../assets/images/logo.jpg');
-    background-size: contain;
+    background-size:contain;
     background-repeat: no-repeat;
-    background-position: center;
+    width: 250px;
+    height: 250px;
 }
 
-/* Make social icons more responsive */
-.social-icon {
-    width: 32px; /* Adjust size as needed */
-    height: 32px; /* Adjust size as needed */
-    transition: transform 0.1s ease; /* Smooth transition */
-
+.form-input {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
-.social-links a:hover .social-icon {
-    animation: bounce 1s; /* Apply bounce animation */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-/* Media Queries */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2em; /* Smaller font size for smaller screens */
-    }
-
-    .soon {
-        font-size: 1.5em; /* Smaller font size for smaller screens */
-    }
-
-    .social-links {
-        gap: 10px;
-    }
-
-    .social-links a {
-        font-size: 1.5em; /* Smaller font size for social icons */
-    }
-
-    .logo {
-        height: 40%; /* Adjust height for logo */
-    }
+.heroImg {
+    width: 65vw;
+    height: 500px;
+    background-color: blue;
+    border-radius: 25px;
 }
 
-@media (max-width: 480px) {
-    h1 {
-        font-size: 1.5em; /* Further reduce font size for very small screens */
-    }
-
-    .soon {
-        font-size: 1.2em; /* Further reduce font size for very small screens */
-    }
-
-    .social-links a {
-        font-size: 1.2em; /* Further reduce social icon size */
-    }
-
-    .logo {
-        height: 30%; /* Further adjust logo height */
-    }
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 60vh;
+    width: 100%;
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+    color: white;
 }
 
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-    }
-    40% {
-        transform: translateY(-30px);
-    }
-    60% {
-        transform: translateY(-15px);
-    }
+.aboutImg {
+    width: 400px;
+    height: 300px;
+    background-color: blue;
 }
 
+.contact-us {
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-us > input {
+    width: 100%;
+}
+
+.name {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.name > .form-input {
+    width: 47%;
+}
+
+.contact-us input {
+    height: 40px;
+}
+
+form > button {
+    margin-top: 20px;
+}
