@@ -11,6 +11,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap" rel="stylesheet">
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
 </head>
 <body>
     <nav>
@@ -34,28 +37,31 @@
       </div>
       <div class="aboutImg"></div>
     </div>
-    <form class="contact-us">
+    <form class="contact-us" id="contact-form">
       <h1>Contact us</h1>
       <div class="name">
         <div class="form-input">
           <h6>First Name</h6>
-          <input type="text">
+          <input type="text" id="first-name">
         </div>
         <div class="form-input">
           <h6>Last Name</h6>
-          <input type="text">
+          <input type="text" id="last-name">
         </div>
       </div>
       <div class="form-input">
         <h6>Email</h6>
-        <input type="email">
+        <input type="email" id="email">
       </div>
       <div class="form-input">
         <h6>Description</h6>
-        <input type="text">
+        <input type="text" id="description">
       </div>
-      <button>Send</button>
-    </form>
-    <script src="index.js"></script>
+      <button type="button" id="send-button">Send</button>
+    </form>    
+    <!-- Load the configuration file -->
+    <script type="text/javascript" src="emailjs-config.js"></script>
+    <!-- Load the main JavaScript file -->
+    <script type="text/javascript" src="form-handler.js"></script>
   </body>
 </html>
