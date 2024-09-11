@@ -1,67 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>solarcode</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="css/styles.css">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap" rel="stylesheet">
-    <script type="text/javascript"
-    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-    </script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="assets/icons/LogoFavicon.svg">
+  <title>solarcode</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap" rel="stylesheet">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"> </script>
+  <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <nav>
-        <div class="logo"></div>
-        <div class="buttonGroup">
-            <button>Contact Us</button>
-        </div>
-    </nav>
-    <div class="hero geologica-font">
-      <h1>“Cracking the code to solar energy”</h1>
-      <p>Études is a pioneering firm that seamlessly merges creativity and functionality to redefine architectural excellence.</p>
-      <div class="heroImg"></div>
+  <nav>
+    <img class="logo" src="assets/images/logo.jpg" alt="Solarcode">
+    <!-- <div class="logo"></div> -->
+    <div class="buttonGroup">
+      <button>
+        <a href="#about-section">About</a>
+      </button>
+      <button>
+        <a href="#contact-form">Contact Us</a>
+      </button>
     </div>
-    <div class="about">
-      <div>
-        <h3>“Cracking the code to solar energy”</h3>
-        <ol>
-          <li>Veltisti ekmetalleush porwn gia egkatastaseis fwtovoltaikwn.</li>
-          <li>Dunatotita paragwgis prasinhs energeias se polites.</li>
-        </ol>
-      </div>
-      <div class="aboutImg"></div>
+  </nav>
+  <div class="hero geologica-font">
+    <h1>“Cracking the code to solar energy”</h1>
+    <img class="heroImg" src="assets/images/solarpanels.jpg" alt="Solarpanels">
+    <!-- <div class="heroImg"></div> -->
+  </div>
+  <div class="about" id="about-section">
+    <h1 class="aboutTitle geologica-font">About solarcode</h1>
+    <div>
+      <ul>
+        <li class="card cd1">
+          <div class="liIcon"><img src="assets/icons/community.svg" alt="Community"></div>
+          <div class="liTitle geologica-font">Empowering Communities</div>
+          <div class="liContent geologica-font">We enable citizens to contribute by offering financial support or rooftop space, fostering a collective solar community</div>
+        </li>
+        <li class="card cd2">
+          <div class="liIcon"><img src="assets/icons/solarpanel.svg" alt="Solarpanel"></div>
+          <div class="liTitle geologica-font">Optimized Solar Placement</div>
+          <div class="liContent geologica-font">Our platform ensures the most effective use of available spaces for maximum energy generation</div>
+        </li>
+        <li class="card cd1">
+          <div class="liIcon"><img src="assets/icons/greenenergy.svg" alt="Green Energy"></div>
+          <div class="liTitle geologica-font">Sustainable Energy Practices</div>
+          <div class="liContent geologica-font">We are dedicated to promoting renewable energy and reducing our environmental impact
+          </div>
+        </li>
+        <li class="card cd2">
+          <div class="liIcon"><img src="assets/icons/sun.svg" alt="Sun"></div>
+          <div class="liTitle geologica-font">Collaborative Vision</div>
+          <div class="liContent geologica-font">Together, we’re creating a brighter, greener future by harnessing the power of the sun
+          </div>
+        </li>
+      </ul>
     </div>
-    <form class="contact-us" id="contact-form">
-      <h1>Contact us</h1>
-      <div class="name">
-        <div class="form-input">
-          <h6>First Name</h6>
-          <input type="text" id="first-name">
-        </div>
-        <div class="form-input">
-          <h6>Last Name</h6>
-          <input type="text" id="last-name">
-        </div>
+  </div>
+  <form class="contact-us geologica-font" id="contact-form">
+    <h1>Contact us</h1>
+    <div class="name">
+      <div class="form-input">
+        <h6>First Name</h6>
+        <input type="text" id="first-name">
       </div>
       <div class="form-input">
-        <h6>Email</h6>
-        <input type="email" id="email">
+        <h6>Last Name</h6>
+        <input type="text" id="last-name">
       </div>
-      <div class="form-input">
-        <h6>Description</h6>
-        <input type="text" id="description">
-      </div>
-      <button type="button" id="send-button">Send</button>
-    </form>    
-    <!-- Load the configuration file -->
-    <script type="text/javascript" src="emailjs-config.js"></script>
-    <!-- Load the main JavaScript file -->
-    <script type="text/javascript" src="form-handler.js"></script>
-  </body>
+    </div>
+    <div class="form-input">
+      <h6>Email</h6>
+      <input type="email" id="email">
+    </div>
+    <div class="form-input">
+      <h6>Description</h6>
+      <input type="text" id="description">
+    </div>
+    <button type="button" id="send-button">Send</button>
+  </form>
+  <!-- Load the configuration file -->
+  <script type="text/javascript" src="emailjs-config.js"></script>
+  <!-- Load the main JavaScript file -->
+  <script type="text/javascript" src="form-handler.js"></script>
+</body>
+
 </html>

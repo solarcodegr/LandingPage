@@ -1,3 +1,10 @@
+:root {
+    --dark-blue:#06044B;
+    --light-blue:#0086FF;
+    --light--green:#05F4C1;
+    --light-gray:#F1F1F1;
+}
+
 body {
     padding: 50px auto;
     display: flex;
@@ -16,7 +23,7 @@ nav {
 
 button {
     border-radius: 5px;
-    background-color: darkblue;
+    background-color: var(--dark-blue);
     color: white;
     border: 0px;
     height: 30px;
@@ -24,6 +31,12 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 10px;
+}
+
+.buttonGroup {
+    display: flex;
+    justify-content: space-between;
 }
 
 .geologica-font {
@@ -39,11 +52,18 @@ button {
 
 .logo {
     /* background-color: red; */
-    background-image: url('../assets/images/logo.jpg');
-    background-size:contain;
-    background-repeat: no-repeat;
-    width: 250px;
-    height: 250px;
+    /* background-image: url('../assets/images/logo.jpg'); */
+    /* background-size:contain; */
+    /* background-repeat: no-repeat; */
+    width: 20%;
+}
+
+.hero {
+    color: var(--dark-blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .form-input {
@@ -52,36 +72,32 @@ button {
     width: 100%;
 }
 
-.hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
 
 .heroImg {
     width: 65vw;
     height: 500px;
-    background-color: blue;
+    /* background-color: blue; */
     border-radius: 25px;
 }
 
+.aboutTitle {
+    color: var(--dark-blue);
+}
+
 .about {
+    /* background: rgb(0,134,255);
+    background: linear-gradient(0deg, rgba(0,134,255,1) 0%, rgba(5,244,193,1) 100%); */
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    flex-direction: column;
     height: 60vh;
     width: 100%;
-    background: rgb(34,193,195);
-    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
-    color: white;
+    /* background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%); */
+    color: var(--light-gray);
 }
 
-.aboutImg {
-    width: 400px;
-    height: 300px;
-    background-color: blue;
-}
 
 .contact-us {
     width: 30vw;
@@ -110,4 +126,48 @@ button {
 
 form > button {
     margin-top: 20px;
+}
+
+
+ul {
+    list-style-type: none;
+}
+
+.liIcon {
+    width: 50px;
+    display: grid;
+    place-items: center;
+}
+
+.card {
+    color: var(--dark-blue);
+    position: relative;
+    height: 100px;
+    background: var(--light-gray);
+    margin: 20px 40px;
+    display: grid;
+    /* position: relative; */
+    /* justify-content: center;
+    align-items: center;
+    text-align: center; */
+    border-radius: 20px;
+}
+
+.cd1 {
+    background: rgb(241,241,241);
+    background: linear-gradient(45deg, rgba(241,241,241,1) 30%, rgba(5,244,193,1) 50%, rgba(241,241,241,1) 70%);
+}
+.cd2 {
+    background: rgb(241,241,241);
+    background: linear-gradient(315deg, rgba(241,241,241,1) 30%, rgba(0,134,255,1) 50%, rgba(241,241,241,1) 70%);
+}
+
+#send-button{
+    color: var(--light-gray);
+    text-decoration: none;
+}
+
+a {
+    color: var(--light-gray);
+    text-decoration: none;
 }
