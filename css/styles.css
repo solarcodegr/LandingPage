@@ -6,7 +6,9 @@
 }
 
 body {
-    padding: 50px auto;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -70,6 +72,7 @@ button {
     display: flex;
     flex-direction: column;
     width: 100%;
+    border-radius: 20px;
 }
 
 
@@ -80,24 +83,56 @@ button {
     border-radius: 25px;
 }
 
+/* about us section */ 
+
 .aboutTitle {
     color: var(--dark-blue);
 }
 
-.about {
-    /* background: rgb(0,134,255);
-    background: linear-gradient(0deg, rgba(0,134,255,1) 0%, rgba(5,244,193,1) 100%); */
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-direction: column;
-    height: 60vh;
-    width: 100%;
-    /* background: rgb(34,193,195);
-    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%); */
-    color: var(--light-gray);
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
+.liIcon {
+    width: 50px;
+    display: grid;
+    place-items: center;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers the cards vertically within the container */
+    height: 60vh;
+    width: 100%;
+}
+
+.card {
+    color: var(--dark-blue);
+    position: relative;
+    height: 100px;
+    background: var(--light-gray);
+    display: flex;
+    justify-content: flex-start;
+    border-radius: 20px;
+    width: 50%; /* Adjust as needed */
+    margin: 20px 0; /* Adds vertical spacing between cards */
+}
+
+.cd1 {
+    align-self: flex-start; /* Aligns the first card to the left */
+    background: linear-gradient(45deg, rgba(241,241,241,1) 30%, rgba(5,244,193,1) 50%, rgba(241,241,241,1) 70%);
+}
+
+.cd2 {
+    align-self: flex-end; /* Aligns the second card to the right */
+    background: linear-gradient(315deg, rgba(241,241,241,1) 30%, rgba(0,134,255,1) 50%, rgba(241,241,241,1) 70%);
+}
+
+
+/*contact us section */
 
 .contact-us {
     width: 30vw;
@@ -129,38 +164,6 @@ form > button {
 }
 
 
-ul {
-    list-style-type: none;
-}
-
-.liIcon {
-    width: 50px;
-    display: grid;
-    place-items: center;
-}
-
-.card {
-    color: var(--dark-blue);
-    position: relative;
-    height: 100px;
-    background: var(--light-gray);
-    margin: 20px 40px;
-    display: grid;
-    /* position: relative; */
-    /* justify-content: center;
-    align-items: center;
-    text-align: center; */
-    border-radius: 20px;
-}
-
-.cd1 {
-    background: rgb(241,241,241);
-    background: linear-gradient(45deg, rgba(241,241,241,1) 30%, rgba(5,244,193,1) 50%, rgba(241,241,241,1) 70%);
-}
-.cd2 {
-    background: rgb(241,241,241);
-    background: linear-gradient(315deg, rgba(241,241,241,1) 30%, rgba(0,134,255,1) 50%, rgba(241,241,241,1) 70%);
-}
 
 #send-button{
     color: var(--light-gray);
@@ -170,4 +173,12 @@ ul {
 a {
     color: var(--light-gray);
     text-decoration: none;
+}
+
+.contact-us-inputfield{
+    border-width: 1px; /* Adjust this value to make the border thinner */
+    border-style: solid;
+    border-color: #ccc; /* You can also specify a border color */
+    padding: 10px; /* Adjust padding to your preference */
+    border-radius: 10px;
 }
