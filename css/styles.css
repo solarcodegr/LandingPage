@@ -1,34 +1,235 @@
+:root {
+    --dark-blue:#06044B;
+    --light-blue:#0086FF;
+    --light--green:#05F4C1;
+    --light-gray:#F1F1F1;
+}
+
 body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    height: 100vh;
+    justify-content: center;
+    background-color: #F1F1F1;
+    overflow-x: hidden;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+}
+
+button {
+    border-radius: 5px;
+    background-color: var(--dark-blue);
+    color: white;
+    border: 0px;
+    height: 30px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+.buttonGroup {
+    display: flex;
+    justify-content: space-between;
+}
+
+.geologica-font {
+    font-family: "Geologica", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0,
+      "CRSV" 0,
+      "SHRP" 0;
+  }
+
+.logo {
+    /* background-color: red; */
+    /* background-image: url('../assets/images/logo.jpg'); */
+    /* background-size:contain; */
+    /* background-repeat: no-repeat; */
+    width: 20%;
+}
+.section-gradient-bar {
+    height: 4px;
+    background: linear-gradient(to right, #0086FF, #05F4C1);
     margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    background-color: #FFFFFF;
-    color: #333;
-    text-align: center; /* Center text for better alignment on smaller screens */
+    padding: 0;
+    width: 100%;
+  }
+
+.hero {
+    color: var(--dark-blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 60px;
+    padding-bottom: 120px;
+}
+.hero h1{
+    padding-bottom: 60px;
+}
+.form-input {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 20px;
 }
 
-h1 {
-    font-size: 2.7em;
-    margin: 0.5em 0;
-    color: #0086FF;
+
+.heroImg {
+    width: 65vw;
+    height: 500px;
+    /* background-color: blue; */
+    border-radius: 25px;
+}
+    
+/* new-about-us section */
+.cd1 {
+    align-self: flex-start; /* Aligns the first card to the left */
+    /* background: linear-gradient(45deg, rgba(241,241,241,1) 30%, rgba(5,244,193,1) 50%, rgba(241,241,241,1) 70%); */
 }
 
-.soon {
-    font-size: 2em;
-    margin: 1em 0;
+.cd2 {
+    align-self: flex-end; /* Aligns the second card to the right */
+    /* background: linear-gradient(315deg, rgba(241,241,241,1) 30%, rgba(0,134,255,1) 50%, rgba(241,241,241,1) 70%); */
+}
+
+.about-us {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    font-family: "Geologica", sans-serif;
+    width: 100%;
+    padding-bottom: 60px;
+    padding-top: 60px;
+
+}
+.about-us-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.about-us h1 {
+    text-align: center;
+    color: #06044B;
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+}
+.about-us-grid {
+    display: flex;
+    flex-direction: column;
+}
+.about-us-card {
+    width: min-content;
+    background-color: #F1F1F1;
+    min-width: 600px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+}
+.about-us-card-content {
+    padding: 1.5rem;
+}
+.about-us-card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.about-us-icon-wrapper {
+    background-color: #05F4C1;
+    border-radius: 50%;
+    padding: 0.5rem;
+    margin-right: 1rem;
+}
+.about-us-icon-wrapper svg {
+    width: 24px;
+    height: 24px;
     color: #06044B;
 }
+.about-us-h3 {
+    color: #06044B;
+    font-size: 1.25rem;
+    margin: 0;
+}
+.about-us-p {
+    color: #06044B;
+    opacity: 0.8;
+    margin: 0;
+}
+.about-us-gradient-bar {
+    height: 4px;
+    background: linear-gradient(to right, #0086FF, #05F4C1);
+}
 
-.social-links {
+/*contact us section */
+
+.contact-us {
+    width: 30vw;
     display: flex;
-    gap: 15px;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.contact-us > input {
+    width: 100%;
+}
+
+.name {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.name > .form-input {
+    width: 47%;
+}
+
+.contact-us input {
+    height: 40px;
+}
+
+form > button {
     margin-top: 20px;
 }
 
+
+
+#send-button{
+    color: var(--light-gray);
+    text-decoration: none;
+}
+
+a {
+    color: var(--light-gray);
+    text-decoration: none;
+}
+
+.contact-us-inputfield{
+    border-width: 1px; /* Adjust this value to make the border thinner */
+    border-style: solid;
+    border-color: #ccc; /* You can also specify a border color */
+    padding: 10px; /* Adjust padding to your preference */
+    border-radius: 10px;
+}
+
+
+/* footer */
 .social-links a {
     font-size: 2em;
     text-decoration: none;
@@ -36,15 +237,19 @@ h1 {
     align-items: center;
 }
 
-.logo {
-    width: 100%;
-    height: 50%; /* Change height to auto for better scaling on smaller screens */
-    background-image: url('../assets/images/logo.jpg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+
+.footer-class{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 /* Make social icons more responsive */
 .social-icon {
     width: 32px; /* Adjust size as needed */
@@ -56,6 +261,8 @@ h1 {
 .social-links a:hover .social-icon {
     animation: bounce 1s; /* Apply bounce animation */
 }
+
+
 
 /* Media Queries */
 @media (max-width: 768px) {
@@ -110,3 +317,18 @@ h1 {
     }
 }
 
+
+
+@media (max-width: 768px) {
+    .gradient-bar {
+      height: 3px; /* Slightly thinner on smaller screens */
+      margin: 15px 0; /* Less vertical space on smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .gradient-bar {
+      height: 2px; /* Even thinner on very small screens */
+      margin: 10px 0; /* Even less vertical space on very small screens */
+    }
+  }
