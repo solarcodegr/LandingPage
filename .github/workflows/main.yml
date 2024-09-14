@@ -1,0 +1,35 @@
+name: Deploy Static Website
+
+on:
+  push:
+    branches:
+      - main  # Adjust this to your target branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    # Propagate secrets as environment variables
+    - name: Set up environment variables
+      run: |
+        echo "EMAILJS_PUBLIC_KEY=${{ secrets.EMAILJS_PUBLIC_KEY }}" >> $GITHUB_ENV
+        echo "EMAILJS_SERVICE_ID=${{ secrets.EMAILJS_SERVICE_ID }}" >> $GITHUB_ENV
+        echo "EMAILJS_TEMPLATE_ID=${{ secrets.EMAILJS_TEMPLATE_ID }}" >> $GITHUB_ENV
+
+    # Build and deploy static site (using Jekyll in this case)
+    - name: Build Jekyll site
+      uses: actions/jekyll-build-pages@v1
+
+    # Upload the build to GitHub Pages
+    - name: Upload pages artifact
+      uses: actions/upload-pages-artifact@v3
+
+    # Deploy to GitHub Pages
+    - name: Deploy to GitHub Pages
+      uses: actions/upload-pages-artifact@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
