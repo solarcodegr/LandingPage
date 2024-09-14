@@ -1,5 +1,5 @@
 const emailJSConfig = {
-    serviceID: process.env.EMAIL_JS_SERVICE_ID,
-    templateID: process.env.EMAIL_JS_TEMPLATE_ID,
-    publicKey: process.env.EMAIL_JS_API_KEY
+    serviceID: process.env.EMAILJS_SERVICE_ID,
+    templateID: process.env.EMAILJS_TEMPLATE_ID,
+    publicKey: process.env.EMAILJS_PUBLIC_KEY
   };
