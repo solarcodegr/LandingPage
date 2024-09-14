@@ -13,8 +13,8 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 100px;
     background-color: #F1F1F1;
+    overflow-x: hidden;
 }
 
 nav {
@@ -61,6 +61,13 @@ button {
     /* background-repeat: no-repeat; */
     width: 20%;
 }
+.section-gradient-bar {
+    height: 4px;
+    background: linear-gradient(to right, #0086FF, #05F4C1);
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
 
 .hero {
     color: var(--dark-blue);
@@ -68,8 +75,12 @@ button {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding-top: 60px;
+    padding-bottom: 120px;
 }
-
+.hero h1{
+    padding-bottom: 60px;
+}
 .form-input {
     display: flex;
     flex-direction: column;
@@ -84,71 +95,85 @@ button {
     /* background-color: blue; */
     border-radius: 25px;
 }
-
-/* about us section */ 
-.about-section{
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: rgb(255, 255, 255);
-    width: 100%;
-}
-.about-title {
-    color: var(--dark-blue);
-    display: block;
-    font-size: 2em;
-    margin-block-start: 0.67em;
-    margin-block-end: 0.67em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
-    unicode-bidi: isolate;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.liIcon {
-    width: 50px;
-    display: grid;
-    place-items: center;
-}
-
-.about {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Centers the cards vertically within the container */
-    height: 60vh;
-    width: 100%;
-}
-
-.card {
-    color: var(--dark-blue);
-    position: relative;
-    height: 100px;
-    background: var(--light-gray);
-    display: flex;
-    justify-content: flex-start;
-    border-radius: 20px;
-    width: 30%; /* Adjust as needed */
-    margin: 20px 0; /* Adds vertical spacing between cards */
-}
-
+    
+/* new-about-us section */
 .cd1 {
-    margin-left: 15%;
     align-self: flex-start; /* Aligns the first card to the left */
-    background: linear-gradient(45deg, rgba(241,241,241,1) 30%, rgba(5,244,193,1) 50%, rgba(241,241,241,1) 70%);
+    /* background: linear-gradient(45deg, rgba(241,241,241,1) 30%, rgba(5,244,193,1) 50%, rgba(241,241,241,1) 70%); */
 }
 
 .cd2 {
-    margin-right: 15%;
     align-self: flex-end; /* Aligns the second card to the right */
-    background: linear-gradient(315deg, rgba(241,241,241,1) 30%, rgba(0,134,255,1) 50%, rgba(241,241,241,1) 70%);
+    /* background: linear-gradient(315deg, rgba(241,241,241,1) 30%, rgba(0,134,255,1) 50%, rgba(241,241,241,1) 70%); */
 }
 
+.about-us {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    font-family: "Geologica", sans-serif;
+    width: 100%;
+    padding-bottom: 60px;
+    padding-top: 60px;
+
+}
+.about-us-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.about-us h1 {
+    text-align: center;
+    color: #06044B;
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+}
+.about-us-grid {
+    display: flex;
+    flex-direction: column;
+}
+.about-us-card {
+    width: min-content;
+    background-color: #F1F1F1;
+    min-width: 600px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+}
+.about-us-card-content {
+    padding: 1.5rem;
+}
+.about-us-card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.about-us-icon-wrapper {
+    background-color: #05F4C1;
+    border-radius: 50%;
+    padding: 0.5rem;
+    margin-right: 1rem;
+}
+.about-us-icon-wrapper svg {
+    width: 24px;
+    height: 24px;
+    color: #06044B;
+}
+.about-us-h3 {
+    color: #06044B;
+    font-size: 1.25rem;
+    margin: 0;
+}
+.about-us-p {
+    color: #06044B;
+    opacity: 0.8;
+    margin: 0;
+}
+.about-us-gradient-bar {
+    height: 4px;
+    background: linear-gradient(to right, #0086FF, #05F4C1);
+}
 
 /*contact us section */
 
@@ -157,6 +182,8 @@ ul {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 60px;
+    margin-bottom: 60px;
 }
 
 .contact-us > input {
@@ -289,3 +316,19 @@ a {
         transform: translateY(-15px);
     }
 }
+
+
+
+@media (max-width: 768px) {
+    .gradient-bar {
+      height: 3px; /* Slightly thinner on smaller screens */
+      margin: 15px 0; /* Less vertical space on smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .gradient-bar {
+      height: 2px; /* Even thinner on very small screens */
+      margin: 10px 0; /* Even less vertical space on very small screens */
+    }
+  }

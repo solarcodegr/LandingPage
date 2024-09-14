@@ -15,6 +15,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap" rel="stylesheet">
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"> </script>
   <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
 <body>
@@ -30,39 +31,69 @@
       </button>
     </div>
   </nav>
+  <div class="section-gradient-bar"></div>
   <div class="hero geologica-font">
     <h1>“Cracking the code to solar energy”</h1>
     <img class="heroImg" src="assets/images/solarpanels.jpg" alt="Solarpanels">
     <!-- <div class="heroImg"></div> -->
   </div>
-  <div class="about-section" id="about-section">
-    <h1 class="about-title geologica-font">About solarcode</h1>
-    <div class="about">
-        <div class="card cd1">
-          <div class="liIcon"><img src="assets/icons/community.svg" alt="Community"></div>
-          <div class="liTitle geologica-font">Empowering Communities</div>
-          <div class="liContent geologica-font">We enable citizens to contribute by offering financial support or rooftop space, fostering a collective solar community</div>
+  <div class="section-gradient-bar"></div>
+  <section class="about-us">
+    <div class="about-us-container">
+      <h1 >About solarcode</h1>
+        <div class="about-us-grid">
+            <div class="about-us-card cd1">
+                <div class="about-us-card-content">
+                    <div class="about-us-card-header">
+                        <div class="about-us-icon-wrapper">
+                            <i data-lucide="users"></i>
+                        </div>
+                        <h3>Empowering Communities</h3>
+                    </div>
+                    <p>We enable citizens to contribute by offering financial support or rooftop space, fostering a collective solar community</p>
+                </div>
+                <div class="about-us-gradient-bar"></div>
+            </div>
+            <div class="about-us-card cd2">
+                <div class="about-us-card-content">
+                    <div class="about-us-card-header">
+                        <div class="about-us-icon-wrapper">
+                            <i data-lucide="sun"></i>
+                        </div>
+                        <h3>Optimized Solar Placement</h3>
+                    </div>
+                    <p>Our platform ensures the most effective use of available spaces for maximum energy generation</p>
+                </div>
+                <div class="about-us-gradient-bar"></div>
+            </div>
+            <div class="about-us-card cd1">
+                <div class="about-us-card-content">
+                    <div class="about-us-card-header">
+                        <div class="about-us-icon-wrapper">
+                            <i data-lucide="leaf"></i>
+                        </div>
+                        <h3>Sustainable Energy Practices</h3>
+                    </div>
+                    <p>We are dedicated to promoting renewable energy and reducing our environmental impact</p>
+                </div>
+                <div class="about-us-gradient-bar"></div>
+            </div>
+            <div class="about-us-card cd2">
+                <div class="about-us-card-content">
+                    <div class="about-us-card-header">
+                        <div class="about-us-icon-wrapper">
+                            <i data-lucide="lightbulb"></i>
+                        </div>
+                        <h3>Collaborative Vision</h3>
+                    </div>
+                    <p>Together, we're creating a brighter, greener future by harnessing the power of the sun</p>
+                </div>
+                <div class="about-us-gradient-bar"></div>
+            </div>
         </div>
-        <div class="card cd2">
-          <div class="liIcon"><img src="assets/icons/solarpanel.svg" alt="Solarpanel"></div>
-          <div class="liTitle geologica-font">Optimized Solar Placement</div>
-          <div class="liContent geologica-font">Our platform ensures the most effective use of available spaces for maximum energy generation</div>
-        </div>
-        <div class="card cd1">
-          <div class="liIcon"><img src="assets/icons/greenenergy.svg" alt="Green Energy"></div>
-          <div class="liTitle geologica-font">Sustainable Energy Practices</div>
-          <div class="liContent geologica-font">We are dedicated to promoting renewable energy and reducing our environmental impact
-          </div>
-        </div>
-        <div class="card cd2">
-          <div class="liIcon"><img src="assets/icons/sun.svg" alt="Sun"></div>
-          <div class="liTitle geologica-font">Collaborative Vision</div>
-          <div class="liContent geologica-font">Together, we’re creating a brighter, greener future by harnessing the power of the sun
-          </div>
-        </div>
-      </ul>
     </div>
-  </div>
+  </section>
+  <div class="section-gradient-bar"></div>
   <form class="contact-us geologica-font" id="contact-form">
     <h1>Contact us</h1>
     <div class="name">
@@ -85,6 +116,7 @@
     </div>
     <button type="button" id="send-button">Send</button>
   </form>
+  <div class="section-gradient-bar"></div>
   <nav class="footer-class">
     <div class="footer-class">
     </div>
@@ -107,6 +139,7 @@
   </nav>
   <!-- Load the configuration file -->
   <script type="text/javascript" src="emailjs-config.js"></script>
+  <script>lucide.createIcons();</script>
   <!-- Load the main JavaScript file -->
   <script type="text/javascript" src="form-handler.js"></script>
 </body>
