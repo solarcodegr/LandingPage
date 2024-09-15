@@ -22,13 +22,6 @@ body {
     box-sizing: border-box;
 }
 
-nav {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgb(255, 255, 255);
-}
 
 button {
     border-radius: 5px;
@@ -69,13 +62,6 @@ a {
         "SHRP" 0;
 }
 
-.logo {
-    /* background-color: red; */
-    /* background-image: url('../assets/images/logo.jpg'); */
-    /* background-size:contain; */
-    /* background-repeat: no-repeat; */
-    width: 20%;
-}
 
 .section-gradient-bar {
     height: 4px;
@@ -427,10 +413,11 @@ textarea.contact-us-inputfield {
     }
 
     .hero h1 {
-        font-size: 2rem;
-        /* Smaller font size for hero section */
-        padding-bottom: 30px;
+        font-size: 1rem; /* Reduced from the previous size */
+        padding-bottom: 30px; /* Reduced from 60px */
         text-align: center;
+        max-width: 800px; /* Limit the width for better readability */
+        margin: 0 auto; /* Center the text */
     }
 
     .heroImg {
@@ -528,7 +515,7 @@ textarea.contact-us-inputfield {
     }
 
     .hero h1 {
-        font-size: 3.5rem; /* Increase font size for bigger screens */
+        font-size: 2rem; /* Increase font size for bigger screens */
         text-align: center;
     }
 }
@@ -546,11 +533,11 @@ textarea.contact-us-inputfield {
     }
 
     .hero h1 {
-        font-size: 4rem; /* Further increase font size for very large screens */
+        font-size: 3rem; /* Further increase font size for very large screens */
     }
 
     .about-us h1 {
-        font-size: 3.5rem; /* Make headings larger in the "About Us" section */
+        font-size: 3rem; /* Make headings larger in the "About Us" section */
     }
 
     .about-us-card {
@@ -584,7 +571,7 @@ nav {
 }
 
 .hero {
-    padding-top: 100px;
+    padding-top: 80px;
     padding-bottom: 140px;
 }
 
@@ -602,3 +589,114 @@ nav {
     margin: 0;
     width: 100%;
 }
+
+
+
+
+/* nav menu */
+
+.navbar {
+    width: 100%;
+    background-color: white;
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 70px;
+  }
+  
+  .logo {
+    height: 200%;
+    width: auto;
+    max-width: 200px;
+    object-fit: contain;
+  }
+  
+  .mobile-logo {
+    display: none;
+  }
+  
+  .menu-icon {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--dark-blue);
+  }
+  
+  .nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav-menu button {
+    margin: 0 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .navbar-container {
+      height: 80px; /* Increased height for mobile */
+    }
+  
+    .desktop-logo {
+      display: none;
+    }
+  
+    .mobile-logo {
+      display: block;
+      height: 100%;
+      width: auto;
+      max-width: none; /* Remove max-width constraint */
+      max-height: 70px; /* Set a maximum height */
+      object-fit: contain;
+    }
+  
+    .menu-icon {
+      display: block;
+    }
+  
+    .nav-menu {
+      position: absolute;
+      left: -100%;
+      top: 80px; /* Adjust to match new mobile navbar height */
+      flex-direction: column;
+      background-color: white;
+      width: 100%;
+      text-align: center;
+      transition: 0.3s;
+      box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+      padding: 20px 0; /* Add some vertical padding */
+    }
+  
+    .nav-menu.active {
+      left: 0;
+    }
+  
+    .nav-menu button {
+      margin: 0.75rem 0; /* Reduced vertical margin between buttons */
+    }
+  
+    .menu-icon.active .bar:nth-child(2) {
+      opacity: 0;
+    }
+  
+    .menu-icon.active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+  
+    .menu-icon.active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+  }
