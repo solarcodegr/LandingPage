@@ -31,18 +31,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      
-      # Set secrets as environment variables and create the config file
-      - name: Create emailJS config file
-        run: |
-          echo "const emailJSConfig = {" > emailjs-config.js
-          echo "    serviceID: '${{ secrets.EMAILJS_SERVICE_ID }}'," >> emailjs-config.js
-          echo "    templateID: '${{ secrets.EMAILJS_TEMPLATE_ID }}'," >> emailjs-config.js
-          echo "    publicKey: '${{ secrets.EMAILJS_PUBLIC_KEY }}'" >> emailjs-config.js
-          echo "};" >> emailjs-config.js
-          echo "export default emailJSConfig;" >> emailjs-config.js
-
-
+        
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
