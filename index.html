@@ -23,10 +23,10 @@
     <img class="logo" src="assets/images/logo.jpg" alt="Solarcode">
     <!-- <div class="logo"></div> -->
     <div class="buttonGroup">
-      <button>
+      <button class="geologica-font">
         <a href="#about-section">About</a>
       </button>
-      <button>
+      <button class="geologica-font">
         <a href="#contact-form">Contact Us</a>
       </button>
     </div>
@@ -38,7 +38,7 @@
     <!-- <div class="heroImg"></div> -->
   </div>
   <div class="section-gradient-bar"></div>
-  <section class="about-us">
+  <section class="about-us" id="about-section">
     <div class="about-us-container">
       <h1 >About solarcode</h1>
         <div class="about-us-grid">
@@ -114,7 +114,7 @@
       <h6>Description</h6>
       <input type="text" id="description" class="contact-us-inputfield">
     </div>
-    <button type="button" id="send-button">Send</button>
+    <button class="geologica-font" type="button" id="send-button">Send</button>
   </form>
   <div class="section-gradient-bar"></div>
   <nav class="footer-class">
@@ -137,6 +137,17 @@
       </a>
   </div>
   </nav>
+  <!-- Script For Smooth Scrolling -->
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
   <!-- Load the configuration file -->
   <script type="text/javascript" src="emailjs-config.js"></script>
   <script>lucide.createIcons();</script>

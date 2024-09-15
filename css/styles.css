@@ -1,8 +1,8 @@
 :root {
-    --dark-blue:#06044B;
-    --light-blue:#0086FF;
-    --light--green:#05F4C1;
-    --light-gray:#F1F1F1;
+    --dark-blue: #06044B;
+    --light-blue: #0086FF;
+    --light--green: #05F4C1;
+    --light-gray: #F1F1F1;
 }
 
 body {
@@ -38,6 +38,16 @@ button {
     margin: 10px;
 }
 
+button:hover {
+    background-color: var(--light-blue);
+    /* Change background color on hover */
+}
+
+a {
+    color: var(--light-gray);
+    text-decoration: none;
+}
+
 .buttonGroup {
     display: flex;
     justify-content: space-between;
@@ -49,10 +59,10 @@ button {
     font-weight: 200;
     font-style: normal;
     font-variation-settings:
-      "slnt" 0,
-      "CRSV" 0,
-      "SHRP" 0;
-  }
+        "slnt" 0,
+        "CRSV" 0,
+        "SHRP" 0;
+}
 
 .logo {
     /* background-color: red; */
@@ -61,13 +71,14 @@ button {
     /* background-repeat: no-repeat; */
     width: 20%;
 }
+
 .section-gradient-bar {
     height: 4px;
     background: linear-gradient(to right, #0086FF, #05F4C1);
     margin: 0;
     padding: 0;
     width: 100%;
-  }
+}
 
 .hero {
     color: var(--dark-blue);
@@ -78,9 +89,11 @@ button {
     padding-top: 60px;
     padding-bottom: 120px;
 }
-.hero h1{
+
+.hero h1 {
     padding-bottom: 60px;
 }
+
 .form-input {
     display: flex;
     flex-direction: column;
@@ -95,15 +108,17 @@ button {
     /* background-color: blue; */
     border-radius: 25px;
 }
-    
+
 /* new-about-us section */
 .cd1 {
-    align-self: flex-start; /* Aligns the first card to the left */
+    align-self: flex-start;
+    /* Aligns the first card to the left */
     /* background: linear-gradient(45deg, rgba(241,241,241,1) 30%, rgba(5,244,193,1) 50%, rgba(241,241,241,1) 70%); */
 }
 
 .cd2 {
-    align-self: flex-end; /* Aligns the second card to the right */
+    align-self: flex-end;
+    /* Aligns the second card to the right */
     /* background: linear-gradient(315deg, rgba(241,241,241,1) 30%, rgba(0,134,255,1) 50%, rgba(241,241,241,1) 70%); */
 }
 
@@ -117,21 +132,25 @@ button {
     padding-top: 60px;
 
 }
+
 .about-us-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
+
 .about-us h1 {
     text-align: center;
     color: #06044B;
     font-size: 2.5rem;
     margin-bottom: 60px;
 }
+
 .about-us-grid {
     display: flex;
     flex-direction: column;
 }
+
 .about-us-card {
     width: min-content;
     background-color: #F1F1F1;
@@ -141,43 +160,51 @@ button {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin-bottom: 50px;
 }
+
 .about-us-card-content {
     padding: 1.5rem;
 }
+
 .about-us-card-header {
     display: flex;
     align-items: center;
     margin-bottom: 1rem;
 }
+
 .about-us-icon-wrapper {
     background-color: #05F4C1;
     border-radius: 50%;
     padding: 0.5rem;
     margin-right: 1rem;
 }
+
 .about-us-icon-wrapper svg {
     width: 24px;
     height: 24px;
     color: #06044B;
 }
+
 .about-us-h3 {
     color: #06044B;
     font-size: 1.25rem;
     margin: 0;
 }
+
 .about-us-p {
     color: #06044B;
     opacity: 0.8;
     margin: 0;
 }
+
 .about-us-gradient-bar {
     height: 4px;
     background: linear-gradient(to right, #0086FF, #05F4C1);
 }
 
+
 /*contact us section */
 
-.contact-us {
+/* .contact-us {
     width: 30vw;
     display: flex;
     flex-direction: column;
@@ -186,7 +213,7 @@ button {
     margin-bottom: 60px;
 }
 
-.contact-us > input {
+.contact-us>input {
     width: 100%;
 }
 
@@ -196,7 +223,7 @@ button {
     justify-content: space-between;
 }
 
-.name > .form-input {
+.name>.form-input {
     width: 47%;
 }
 
@@ -204,28 +231,177 @@ button {
     height: 40px;
 }
 
-form > button {
+form>button {
     margin-top: 20px;
 }
 
 
 
-#send-button{
+#send-button {
     color: var(--light-gray);
     text-decoration: none;
 }
 
-a {
-    color: var(--light-gray);
-    text-decoration: none;
-}
 
-.contact-us-inputfield{
-    border-width: 1px; /* Adjust this value to make the border thinner */
+.contact-us-inputfield {
+    border-width: 1px;
     border-style: solid;
-    border-color: #ccc; /* You can also specify a border color */
-    padding: 10px; /* Adjust padding to your preference */
+    border-color: #ccc;
+    padding: 10px;
     border-radius: 10px;
+} */
+
+/* Contact Us Section */
+
+.contact-us {
+    width: 50%;
+    /* Make it take half of the width for larger screens */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.contact-us h1 {
+    font-size: 2.5rem;
+    /* Make heading more prominent */
+    margin-bottom: 20px;
+}
+
+.form-input h6 {
+    font-size: 1.1rem;
+    /* Increase label size for better readability */
+    margin-bottom: 5px;
+    /* Add some space between label and input */
+}
+
+.form-input {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.contact-us-inputfield {
+    width: 100%;
+    height: 35px;
+    /* Reduced height of input boxes */
+    padding: 8px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 0.9rem;
+    /* Slightly smaller text in the input fields */
+}
+
+/* Adjust first and last name fields */
+.name {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.name>.form-input {
+    width: 48%;
+    /* Make the first and last name fields take equal width */
+}
+
+#send-button {
+    padding: 10px 20px;
+    background-color: var(--dark-blue);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#send-button:hover {
+    background-color: var(--light-blue);
+    /* Change background color on hover */
+}
+
+/* Media Queries for Responsiveness */
+
+/* For tablet screens */
+@media (max-width: 768px) {
+    .contact-us {
+        width: 80%;
+        /* Make the form wider on smaller screens */
+    }
+
+    .contact-us h1 {
+        font-size: 2rem;
+        /* Slightly smaller heading */
+    }
+
+    .name {
+        flex-direction: column;
+        /* Stack first and last name vertically */
+    }
+
+    .name>.form-input {
+        width: 100%;
+        /* Make input fields full width */
+    }
+
+    .contact-us-inputfield {
+        height: 30px;
+        /* Slightly smaller input fields on smaller screens */
+    }
+
+    #send-button {
+        width: auto;
+        /* Keep the send button's width auto */
+    }
+}
+
+/* For mobile screens */
+@media (max-width: 480px) {
+    .contact-us {
+        width: 95%;
+        /* Full width for mobile devices */
+    }
+
+    .contact-us h1 {
+        font-size: 1.75rem;
+        /* Smaller heading */
+    }
+
+    .form-input h6 {
+        font-size: 1rem;
+        /* Adjust the label size for mobile */
+    }
+
+    .contact-us-inputfield {
+        height: 30px;
+        /* Smaller input fields on mobile */
+    }
+
+    /* Center the form elements */
+    .contact-us {
+        align-items: center;
+    }
+
+    .form-input {
+        width: 100%;
+        /* Ensure input fields take full width */
+        text-align: center;
+        /* Center input fields */
+    }
+
+    #send-button {
+        width: auto;
+        /* Revert send button width to auto */
+    }
 }
 
 
@@ -238,7 +414,7 @@ a {
 }
 
 
-.footer-class{
+.footer-class {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -250,85 +426,118 @@ a {
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
 /* Make social icons more responsive */
 .social-icon {
-    width: 32px; /* Adjust size as needed */
-    height: 32px; /* Adjust size as needed */
-    transition: transform 0.1s ease; /* Smooth transition */
+    width: 32px;
+    /* Adjust size as needed */
+    height: 32px;
+    /* Adjust size as needed */
+    transition: transform 0.1s ease;
+    /* Smooth transition */
 
 }
 
 .social-links a:hover .social-icon {
-    animation: bounce 1s; /* Apply bounce animation */
+    animation: bounce 1s;
+    /* Apply bounce animation */
 }
 
 
 
 /* Media Queries */
+
+/* Tablet and smaller screens (max-width: 768px) */
 @media (max-width: 768px) {
-    h1 {
-        font-size: 2em; /* Smaller font size for smaller screens */
+    nav {
+        flex-direction: column;
+        text-align: center;
     }
 
-    .soon {
-        font-size: 1.5em; /* Smaller font size for smaller screens */
+    .buttonGroup {
+        flex-direction: column;
+    }
+
+    .logo {
+        width: 50%;
+        /* Adjust logo size */
+        margin: 10px auto;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+        /* Smaller font size for hero section */
+        padding-bottom: 30px;
+        text-align: center;
+    }
+
+    .heroImg {
+        width: 90vw;
+        /* Allow the image to be more flexible */
+        height: auto;
+    }
+
+    .about-us-grid {
+        flex-direction: column;
+        /* Stack cards vertically */
+    }
+
+    .about-us-card {
+        min-width: auto;
+        width: 90%;
+        /* Cards take up more width */
+        margin: 20px auto;
+    }
+
+    .contact-us {
+        width: 80vw;
+        /* Allow the form to be wider on smaller screens */
+    }
+
+    .name {
+        flex-direction: column;
+        /* Stack first and last name inputs */
+    }
+
+    .name>.form-input {
+        width: 100%;
+    }
+
+    .footer-class {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Mobile phones (max-width: 480px) */
+@media (max-width: 480px) {
+    .logo {
+        width: 60%;
+    }
+
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .heroImg {
+        width: 100vw;
+        height: auto;
+    }
+
+    .about-us-card {
+        width: 95%;
+    }
+
+    .contact-us {
+        width: 95%;
     }
 
     .social-links {
-        gap: 10px;
+        flex-direction: column;
     }
 
-    .social-links a {
-        font-size: 1.5em; /* Smaller font size for social icons */
-    }
-
-    .logo {
-        height: 40%; /* Adjust height for logo */
+    .social-icon {
+        width: 24px;
+        height: 24px;
     }
 }
-
-@media (max-width: 480px) {
-    h1 {
-        font-size: 1.5em; /* Further reduce font size for very small screens */
-    }
-
-    .soon {
-        font-size: 1.2em; /* Further reduce font size for very small screens */
-    }
-
-    .social-links a {
-        font-size: 1.2em; /* Further reduce social icon size */
-    }
-
-    .logo {
-        height: 30%; /* Further adjust logo height */
-    }
-}
-
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-    }
-    40% {
-        transform: translateY(-30px);
-    }
-    60% {
-        transform: translateY(-15px);
-    }
-}
-
-
-
-@media (max-width: 768px) {
-    .gradient-bar {
-      height: 3px; /* Slightly thinner on smaller screens */
-      margin: 15px 0; /* Less vertical space on smaller screens */
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .gradient-bar {
-      height: 2px; /* Even thinner on very small screens */
-      margin: 10px 0; /* Even less vertical space on very small screens */
-    }
-  }
