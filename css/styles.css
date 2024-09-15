@@ -224,33 +224,30 @@ a {
 
 .contact-us h1 {
     font-size: 2.5rem;
-    /* Make heading more prominent */
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.form-input {
     margin-bottom: 20px;
 }
 
 .form-input h6 {
-    font-size: 1.1rem;
-    /* Increase label size for better readability */
+    font-size: 1rem;
     margin-bottom: 5px;
-    /* Add some space between label and input */
-}
-
-.form-input {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin-bottom: 15px;
 }
 
 .contact-us-inputfield {
     width: 100%;
-    height: 35px;
-    /* Reduced height of input boxes */
-    padding: 8px;
-    border-radius: 10px;
+    padding: 10px;
+    border-radius: 5px;
     border: 1px solid #ccc;
-    font-size: 0.9rem;
-    /* Slightly smaller text in the input fields */
+    font-size: 1rem;
+}
+
+textarea.contact-us-inputfield {
+    resize: vertical;
+    min-height: 100px;
 }
 
 /* Adjust first and last name fields */
@@ -267,24 +264,22 @@ a {
 }
 
 #send-button {
-    padding: 10px 20px;
+    padding: 8px 20px;
     background-color: var(--dark-blue);
     color: white;
     border: none;
     border-radius: 5px;
-    font-size: 1rem;
+    font-size: 0.9rem;
     cursor: pointer;
-    width: auto;
     text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: inline-block;
     margin-top: 20px;
+    transition: background-color 0.3s ease;
+    width: 60%
 }
 
 #send-button:hover {
     background-color: var(--light-blue);
-    /* Change background color on hover */
 }
 
 /* Media Queries for Responsiveness */
@@ -326,11 +321,12 @@ a {
 @media (max-width: 480px) {
     .contact-us {
         width: 95%;
+        padding: 20px
         /* Full width for mobile devices */
     }
 
     .contact-us h1 {
-        font-size: 1.75rem;
+        font-size: 2rem;
         /* Smaller heading */
     }
 
