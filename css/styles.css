@@ -657,6 +657,9 @@ nav {
       display: none;
     }
   
+    .logo{
+        height: auto;
+    }
     .mobile-logo {
       display: block;
       height: 100%;
