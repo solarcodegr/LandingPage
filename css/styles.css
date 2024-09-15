@@ -202,54 +202,6 @@ a {
 }
 
 
-/*contact us section */
-
-/* .contact-us {
-    width: 30vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 60px;
-    margin-bottom: 60px;
-}
-
-.contact-us>input {
-    width: 100%;
-}
-
-.name {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-}
-
-.name>.form-input {
-    width: 47%;
-}
-
-.contact-us input {
-    height: 40px;
-}
-
-form>button {
-    margin-top: 20px;
-}
-
-
-
-#send-button {
-    color: var(--light-gray);
-    text-decoration: none;
-}
-
-
-.contact-us-inputfield {
-    border-width: 1px;
-    border-style: solid;
-    border-color: #ccc;
-    padding: 10px;
-    border-radius: 10px;
-} */
 
 /* Contact Us Section */
 
@@ -262,6 +214,7 @@ form>button {
     align-items: center;
     margin-top: 60px;
     margin-bottom: 60px;
+    color: var(--dark-blue);
 }
 
 .contact-us h1 {
@@ -405,6 +358,7 @@ form>button {
 }
 
 
+
 /* footer */
 .social-links a {
     font-size: 2em;
@@ -413,34 +367,41 @@ form>button {
     align-items: center;
 }
 
-
 .footer-class {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 20px 0;
+    background-color: white;
+    width: 100%;
+}
+
+.copyright {
+    color: var(--dark-blue); /* Dark blue text */
+    margin-bottom: 10px; /* Add space between copyright and social links */
+    text-align: center;
 }
 
 .social-links {
     display: flex;
     gap: 15px;
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: 20px;
 }
 
-/* Make social icons more responsive */
+/* Social icons default and hover color */
 .social-icon {
     width: 32px;
     /* Adjust size as needed */
     height: 32px;
     /* Adjust size as needed */
-    transition: transform 0.1s ease;
+    filter: brightness(0) saturate(100%) invert(12%) sepia(83%) saturate(3470%) hue-rotate(238deg) brightness(93%) contrast(98%);    transition: filter 0s ease;
     /* Smooth transition */
-
 }
 
 .social-links a:hover .social-icon {
-    animation: bounce 1s;
-    /* Apply bounce animation */
+    filter: brightness(0) saturate(100%) invert(41%) sepia(85%) saturate(2383%) hue-rotate(195deg) brightness(102%) contrast(101%);
+    transform: scale(1.1);
 }
 
 
@@ -533,11 +494,110 @@ form>button {
     }
 
     .social-links {
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
     }
 
     .social-icon {
         width: 24px;
         height: 24px;
     }
+
+    .footer-class {
+        padding: 10px;
+    }
+
+    .copyright {
+        font-size: 0.8rem; /* Slightly smaller font for mobile */
+    }
+}
+
+/* General layout changes for ultrawide screens */
+@media (min-width: 1440px) {
+    .about-us-container, .contact-us {
+        max-width: 1200px; /* Add a max-width to prevent the content from stretching too much */
+        margin: 0 auto; /* Center the content on large screens */
+    }
+
+    /* Hero image adjustments for larger screens */
+    .heroImg {
+        width: 55vw; /* Slightly reduce width to maintain aspect ratio */
+        height: auto;
+    }
+
+    .hero h1 {
+        font-size: 3.5rem; /* Increase font size for bigger screens */
+        text-align: center;
+    }
+}
+
+/* Ultra-wide screens (larger than 1920px) */
+@media (min-width: 1920px) {
+    .about-us-container, .contact-us {
+        max-width: 1400px; /* Set a larger max-width for wider screens */
+        padding: 0 40px; /* Add some padding to the sides */
+    }
+
+    .heroImg {
+        width: 50vw; /* Adjust the width of the hero image */
+        height: auto;
+    }
+
+    .hero h1 {
+        font-size: 4rem; /* Further increase font size for very large screens */
+    }
+
+    .about-us h1 {
+        font-size: 3.5rem; /* Make headings larger in the "About Us" section */
+    }
+
+    .about-us-card {
+        min-width: 700px; /* Make about-us cards wider for larger screens */
+    }
+
+    .contact-us h1 {
+        font-size: 3rem; /* Increase the contact section heading size */
+    }
+
+    .contact-us-inputfield {
+        font-size: 1.2rem; /* Increase input font size */
+        padding: 10px; /* Adjust padding for larger fields */
+    }
+
+    /* Adjust button sizes for large screens */
+    button, #send-button {
+        padding: 15px 30px;
+        font-size: 1.2rem;
+    }
+}
+
+/* General fixes for larger screens */
+body {
+    max-width: 100vw;
+    overflow-x: hidden; /* Ensure no horizontal scrollbars on ultrawide displays */
+}
+
+nav {
+    padding: 20px 0;
+}
+
+.hero {
+    padding-top: 100px;
+    padding-bottom: 140px;
+}
+
+.about-us {
+    padding: 100px 0;
+}
+
+.contact-us {
+    padding: 80px 0;
+}
+
+.section-gradient-bar {
+    height: 4px;
+    background: linear-gradient(to right, #0086FF, #05F4C1);
+    margin: 0;
+    width: 100%;
 }
