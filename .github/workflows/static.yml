@@ -32,12 +32,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       
-    # Step to set secrets as environment variables
-      - name: Set up environment variables
+      # Set secrets as environment variables and create the config file
+      - name: Create emailJS config file
         run: |
-          sed -i 's/{{ EMAILJS_PUBLIC_KEY }}/'${{ secrets.EMAILJS_PUBLIC_KEY }}/g' ./emailjs-config.js
-          sed -i 's/{{ EMAILJS_SERVICE_ID }}/'${{ secrets.EMAILJS_SERVICE_ID }}/g' ./emailjs-config.js
-          sed -i 's/{{ EMAILJS_TEMPLATE_ID }}/'${{ secrets.EMAILJS_TEMPLATE_ID }}/g' ./emailjs-config.js
+          echo "const emailJSConfig = {" > emailjs-config.js
+          echo "    serviceID: '${{ secrets.EMAILJS_SERVICE_ID }}'," >> emailjs-config.js
+          echo "    templateID: '${{ secrets.EMAILJS_TEMPLATE_ID }}'," >> emailjs-config.js
+          echo "    publicKey: '${{ secrets.EMAILJS_PUBLIC_KEY }}'" >> emailjs-config.js
+          echo "};" >> emailjs-config.js
+          echo "export default emailJSConfig;" >> emailjs-config.js
 
 
       - name: Setup Pages
