@@ -22,23 +22,27 @@ body {
     box-sizing: border-box;
 }
 
-
+/* Updated button styles */
 button {
     border-radius: 5px;
     background-color: var(--dark-blue);
     color: white;
-    border: 0px;
-    height: 30px;
-    padding: 20px;
+    border: 0;
+    height: 40px;
+    /* Fixed height */
+    width: 120px;
+    /* Fixed width */
+    padding: 0 10px;
+    /* Horizontal padding */
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 10px;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
     background-color: var(--light-blue);
-    /* Change background color on hover */
 }
 
 a {
@@ -61,7 +65,6 @@ a {
         "CRSV" 0,
         "SHRP" 0;
 }
-
 
 .section-gradient-bar {
     height: 4px;
@@ -92,25 +95,19 @@ a {
     border-radius: 20px;
 }
 
-
 .heroImg {
     width: 65vw;
     height: 500px;
-    /* background-color: blue; */
     border-radius: 25px;
 }
 
-/* new-about-us section */
+/* About Us section styles */
 .cd1 {
     align-self: flex-start;
-    /* Aligns the first card to the left */
-    /* background: linear-gradient(45deg, rgba(241,241,241,1) 30%, rgba(5,244,193,1) 50%, rgba(241,241,241,1) 70%); */
 }
 
 .cd2 {
     align-self: flex-end;
-    /* Aligns the second card to the right */
-    /* background: linear-gradient(315deg, rgba(241,241,241,1) 30%, rgba(0,134,255,1) 50%, rgba(241,241,241,1) 70%); */
 }
 
 .about-us {
@@ -121,7 +118,6 @@ a {
     width: 100%;
     padding-bottom: 60px;
     padding-top: 60px;
-
 }
 
 .about-us-container {
@@ -192,13 +188,9 @@ a {
     background: linear-gradient(to right, #0086FF, #05F4C1);
 }
 
-
-
 /* Contact Us Section */
-
 .contact-us {
     width: 50%;
-    /* Make it take half of the width for larger screens */
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -236,7 +228,6 @@ textarea.contact-us-inputfield {
     min-height: 100px;
 }
 
-/* Adjust first and last name fields */
 .name {
     display: flex;
     width: 100%;
@@ -246,7 +237,6 @@ textarea.contact-us-inputfield {
 
 .name>.form-input {
     width: 48%;
-    /* Make the first and last name fields take equal width */
 }
 
 #send-button {
@@ -268,88 +258,7 @@ textarea.contact-us-inputfield {
     background-color: var(--light-blue);
 }
 
-/* Media Queries for Responsiveness */
-
-/* For tablet screens */
-@media (max-width: 768px) {
-    .contact-us {
-        width: 80%;
-        /* Make the form wider on smaller screens */
-    }
-
-    .contact-us h1 {
-        font-size: 2rem;
-        /* Slightly smaller heading */
-    }
-
-    .name {
-        flex-direction: column;
-        /* Stack first and last name vertically */
-    }
-
-    .name>.form-input {
-        width: 100%;
-        /* Make input fields full width */
-    }
-
-    .contact-us-inputfield {
-        height: 30px;
-        /* Slightly smaller input fields on smaller screens */
-    }
-
-    #send-button {
-        width: auto;
-        /* Keep the send button's width auto */
-    }
-}
-
-/* For mobile screens */
-@media (max-width: 480px) {
-    .contact-us {
-        width: 95%;
-        padding: 20px
-        /* Full width for mobile devices */
-    }
-
-    .contact-us h1 {
-        font-size: 2rem;
-        /* Smaller heading */
-    }
-
-    .form-input h6 {
-        font-size: 1rem;
-        /* Adjust the label size for mobile */
-    }
-
-    .contact-us-inputfield {
-        height: 30px;
-        /* Smaller input fields on mobile */
-    }
-
-    /* Center the form elements */
-    .contact-us {
-        align-items: center;
-
-    }
-
-    .form-input {
-        width: 100%;
-        /* Ensure input fields take full width */
-        text-align: center;
-        /* Center input fields */
-    }
-
-    #send-button {
-        width: auto;
-        height: auto;
-        align-content:space-between;
-        /* Revert send button width to auto */
-    }
-}
-
-
-
-/* footer */
+/* Footer styles */
 .social-links a {
     font-size: 2em;
     text-decoration: none;
@@ -367,8 +276,8 @@ textarea.contact-us-inputfield {
 }
 
 .copyright {
-    color: var(--dark-blue); /* Dark blue text */
-    margin-bottom: 10px; /* Add space between copyright and social links */
+    color: var(--dark-blue);
+    margin-bottom: 10px;
     text-align: center;
 }
 
@@ -379,14 +288,11 @@ textarea.contact-us-inputfield {
     margin-bottom: 20px;
 }
 
-/* Social icons default and hover color */
 .social-icon {
     width: 32px;
-    /* Adjust size as needed */
     height: 32px;
-    /* Adjust size as needed */
-    filter: brightness(0) saturate(100%) invert(12%) sepia(83%) saturate(3470%) hue-rotate(238deg) brightness(93%) contrast(98%);    transition: filter 0s ease;
-    /* Smooth transition */
+    filter: brightness(0) saturate(100%) invert(12%) sepia(83%) saturate(3470%) hue-rotate(238deg) brightness(93%) contrast(98%);
+    transition: filter 0.3s ease;
 }
 
 .social-links a:hover .social-icon {
@@ -394,11 +300,59 @@ textarea.contact-us-inputfield {
     transform: scale(1.1);
 }
 
+/* Navbar styles */
+.navbar {
+    width: 100%;
+    background-color: white;
+}
 
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 70px;
+}
+
+.logo {
+    height: 200%;
+    width: auto;
+    max-width: 200px;
+    object-fit: contain;
+}
+
+.mobile-logo {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--dark-blue);
+}
+
+/* Updated nav-menu styles */
+.nav-menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav-menu button {
+    margin: 0 10px;
+}
 
 /* Media Queries */
-
-/* Tablet and smaller screens (max-width: 768px) */
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
@@ -411,44 +365,38 @@ textarea.contact-us-inputfield {
 
     .logo {
         width: 50%;
-        /* Adjust logo size */
         margin: 10px auto;
     }
 
     .hero h1 {
-        font-size: 1rem; /* Reduced from the previous size */
-        padding-bottom: 30px; /* Reduced from 60px */
+        font-size: 1rem;
+        padding-bottom: 30px;
         text-align: center;
-        max-width: 800px; /* Limit the width for better readability */
-        margin: 0 auto; /* Center the text */
+        max-width: 800px;
+        margin: 0 auto;
     }
 
     .heroImg {
         width: 90vw;
-        /* Allow the image to be more flexible */
         height: auto;
     }
 
     .about-us-grid {
         flex-direction: column;
-        /* Stack cards vertically */
     }
 
     .about-us-card {
         min-width: auto;
         width: 90%;
-        /* Cards take up more width */
         margin: 20px auto;
     }
 
     .contact-us {
         width: 80vw;
-        /* Allow the form to be wider on smaller screens */
     }
 
     .name {
         flex-direction: column;
-        /* Stack first and last name inputs */
     }
 
     .name>.form-input {
@@ -459,9 +407,108 @@ textarea.contact-us-inputfield {
         flex-direction: column;
         align-items: center;
     }
+
+    .navbar-container {
+        height: 80px;
+    }
+
+    .desktop-logo {
+        display: none;
+    }
+
+    .logo {
+        height: auto;
+    }
+
+    .mobile-logo {
+        display: block;
+        height: 100%;
+        width: auto;
+        max-width: none;
+        max-height: 70px;
+        object-fit: contain;
+    }
+
+    .mobile-logo {
+        display: block;
+        height: auto;
+        width: 80%;
+        max-width: 250px;
+        max-height: 90px;
+        object-fit: contain;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    /* .nav-menu {
+        position: absolute;
+        left: -100%;
+        top: 80px;
+        flex-direction: column;
+        background-color: white;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        padding: 20px 0;
+    } */
+
+    /* Modify the mobile nav menu to appear below the navbar */
+    .nav-menu {
+        position: relative;
+        /* Make the nav-menu a part of the normal flow */
+        top: 0;
+        /* Align it directly below the navbar */
+        flex-direction: column;
+        background-color: white;
+        width: 100%;
+        text-align: center;
+        transition: max-height 0.3s ease;
+        /* Smooth opening */
+        max-height: 0;
+        /* Initially closed */
+        overflow: hidden;
+        /* Hide content when closed */
+        padding: 0;
+        /* No extra space when closed */
+        box-shadow: none;
+        /* Remove any shadow */
+    }
+
+    /* .nav-menu.active {
+        left: 0;
+    } */
+
+    /* When active, expand the nav-menu */
+    .nav-menu.active {
+        max-height: 300px;
+        /* Adjust as needed */
+        padding: 20px 0;
+    }
+
+    .nav-menu button {
+        margin: 0.75rem 0;
+        width: 80%;
+        max-width: 200px;
+    }
+    
+
+    .menu-icon.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-icon.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .menu-icon.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
 }
 
-/* Mobile phones (max-width: 480px) */
 @media (max-width: 480px) {
     .logo {
         width: 60%;
@@ -500,73 +547,87 @@ textarea.contact-us-inputfield {
     }
 
     .copyright {
-        font-size: 0.8rem; /* Slightly smaller font for mobile */
+        font-size: 0.8rem;
+    }
+
+    .nav-menu button {
+        width: 90%;
     }
 }
 
-/* General layout changes for ultrawide screens */
 @media (min-width: 1440px) {
-    .about-us-container, .contact-us {
-        max-width: 1200px; /* Add a max-width to prevent the content from stretching too much */
-        margin: 0 auto; /* Center the content on large screens */
+
+    .about-us-container,
+    .contact-us {
+        max-width: 1200px;
+        margin: 0 auto;
     }
 
-    /* Hero image adjustments for larger screens */
     .heroImg {
-        width: 55vw; /* Slightly reduce width to maintain aspect ratio */
+        width: 55vw;
         height: auto;
     }
 
     .hero h1 {
-        font-size: 2rem; /* Increase font size for bigger screens */
+        font-size: 2rem;
         text-align: center;
     }
+
+    .nav-menu button {
+        width: 140px;
+        height: 44px;
+        font-size: 1.1rem;
+    }
 }
 
-/* Ultra-wide screens (larger than 1920px) */
 @media (min-width: 1920px) {
-    .about-us-container, .contact-us {
-        max-width: 1400px; /* Set a larger max-width for wider screens */
-        padding: 0 40px; /* Add some padding to the sides */
+
+    .about-us-container,
+    .contact-us {
+        max-width: 1400px;
+        padding: 0 40px;
     }
 
     .heroImg {
-        width: 50vw; /* Adjust the width of the hero image */
+        width: 50vw;
         height: auto;
     }
 
     .hero h1 {
-        font-size: 3rem; /* Further increase font size for very large screens */
+        font-size: 3rem;
     }
 
     .about-us h1 {
-        font-size: 3rem; /* Make headings larger in the "About Us" section */
+        font-size: 3rem;
     }
 
     .about-us-card {
-        min-width: 700px; /* Make about-us cards wider for larger screens */
+        min-width: 700px;
     }
 
     .contact-us h1 {
-        font-size: 3rem; /* Increase the contact section heading size */
+        font-size: 3rem;
     }
 
     .contact-us-inputfield {
-        font-size: 1.2rem; /* Increase input font size */
-        padding: 10px; /* Adjust padding for larger fields */
+        font-size: 1.2rem;
+        padding: 10px;
     }
 
-    /* Adjust button sizes for large screens */
-    button, #send-button {
+    button,
+    #send-button {
         padding: 15px 30px;
         font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 3rem;
     }
 }
 
-/* General fixes for larger screens */
 body {
     max-width: 100vw;
-    overflow-x: hidden; /* Ensure no horizontal scrollbars on ultrawide displays */
+    overflow-x: hidden;
 }
 
 nav {
@@ -585,124 +646,3 @@ nav {
 .contact-us {
     padding: 80px 0;
 }
-
-.section-gradient-bar {
-    height: 4px;
-    background: linear-gradient(to right, #0086FF, #05F4C1);
-    margin: 0;
-    width: 100%;
-}
-
-
-
-
-/* nav menu */
-
-.navbar {
-    width: 100%;
-    background-color: white;
-  }
-  
-  .navbar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.5rem 1rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    height: 70px;
-  }
-  
-  .logo {
-    height: 200%;
-    width: auto;
-    max-width: 200px;
-    object-fit: contain;
-  }
-  
-  .mobile-logo {
-    display: none;
-  }
-  
-  .menu-icon {
-    display: none;
-    cursor: pointer;
-  }
-  
-  .bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    transition: all 0.3s ease-in-out;
-    background-color: var(--dark-blue);
-  }
-  
-  .nav-menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .nav-menu button {
-    margin: 0 10px;
-  }
-  
-  @media (max-width: 768px) {
-    .navbar-container {
-      height: 80px; /* Increased height for mobile */
-    }
-  
-    .desktop-logo {
-      display: none;
-    }
-  
-    .logo{
-        height: auto;
-    }
-    .mobile-logo {
-      display: block;
-      height: 100%;
-      width: auto;
-      max-width: none; /* Remove max-width constraint */
-      max-height: 70px; /* Set a maximum height */
-      object-fit: contain;
-    }
-  
-    .menu-icon {
-      display: block;
-    }
-  
-    .nav-menu {
-      position: absolute;
-      left: -100%;
-      top: 80px; /* Adjust to match new mobile navbar height */
-      flex-direction: column;
-      background-color: white;
-      width: 100%;
-      text-align: center;
-      transition: 0.3s;
-      box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
-      padding: 20px 0; /* Add some vertical padding */
-    }
-  
-    .nav-menu.active {
-      left: 0;
-    }
-  
-    .nav-menu button {
-      margin: 0.75rem 0; /* Reduced vertical margin between buttons */
-    }
-  
-    .menu-icon.active .bar:nth-child(2) {
-      opacity: 0;
-    }
-  
-    .menu-icon.active .bar:nth-child(1) {
-      transform: translateY(8px) rotate(45deg);
-    }
-  
-    .menu-icon.active .bar:nth-child(3) {
-      transform: translateY(-8px) rotate(-45deg);
-    }
-  }

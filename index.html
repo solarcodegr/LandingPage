@@ -22,30 +22,30 @@
   <nav class="navbar">
     <div class="navbar-container">
       <img class="logo desktop-logo" src="assets/images/logo.jpg" alt="Solarcode">
-      <img class="logo mobile-logo" src="assets/images/LOGO_solarcode_vertical.png" alt="Solarcode">
+      <img class="logo mobile-logo" src="assets/images/logo.jpg" alt="Solarcode">
       <div class="menu-icon">
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
       </div>
-      <div class="nav-menu">
-        <button class="geologica-font">
-          <a href="#about-section">About</a>
-        </button>
-        <button class="geologica-font">
-          <a href="#contact-form">Contact Us</a>
-        </button>
-      </div>
     </div>
   </nav>
-  <div class="section-gradient-bar"></div>
+    <div class="section-gradient-bar"></div>
+    <div class="nav-menu">
+      <button class="geologica-font">
+        <a href="#about-section">About</a>
+      </button>
+      <button class="geologica-font">
+        <a href="#contact-form">Contact Us</a>
+      </button>
+    </div>
   <div class="hero geologica-font">
     <h1>“Cracking the code to solar energy”</h1>
     <img class="heroImg" src="assets/images/solarpanels.jpg" alt="Solarpanels">
     <!-- <div class="heroImg"></div> -->
   </div>
   <div class="section-gradient-bar"></div>
-  <section class="about-us" id="about-section">
+  <section class="about-us geologica-font" id="about-section">
     <div class="about-us-container">
       <h1>About solarcode</h1>
       <div class="about-us-grid">
@@ -167,12 +167,12 @@
   <script>
     const menuIcon = document.querySelector('.menu-icon');
     const navMenu = document.querySelector('.nav-menu');
-  
+
     menuIcon.addEventListener('click', () => {
       menuIcon.classList.toggle('active');
       navMenu.classList.toggle('active');
     });
-  
+
     // Close menu when a link is clicked
     document.querySelectorAll('.nav-menu button a').forEach(n => n.addEventListener('click', () => {
       menuIcon.classList.remove('active');
