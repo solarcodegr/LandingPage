@@ -1,5 +1,7 @@
-const emailJSConfig = {
-    serviceID: {{EMAILJS_SERVICE_ID}},
-    templateID: {{EMAILJS_TEMPLATE_ID}},
-    publicKey: {{EMAILJS_PUBLIC_KEY}}
-  };
+const EMAILJS_CONFIG = {
+  publicKey: "rMhFVg4AaWPLBKvSv",      
+  serviceID: "service_dz49bkg",     
+  templateID: "template_8cizz7x"     
+};
+
+//if you find this pls dont spam :)

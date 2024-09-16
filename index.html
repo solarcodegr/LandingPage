@@ -19,16 +19,23 @@
 </head>
 
 <body>
-  <nav>
-    <img class="logo" src="assets/images/logo.jpg" alt="Solarcode">
-    <!-- <div class="logo"></div> -->
-    <div class="buttonGroup">
-      <button class="geologica-font">
-        <a href="#about-section">About</a>
-      </button>
-      <button class="geologica-font">
-        <a href="#contact-form">Contact Us</a>
-      </button>
+  <nav class="navbar">
+    <div class="navbar-container">
+      <img class="logo desktop-logo" src="assets/images/logo.jpg" alt="Solarcode">
+      <img class="logo mobile-logo" src="assets/images/LOGO_solarcode_vertical.png" alt="Solarcode">
+      <div class="menu-icon">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <div class="nav-menu">
+        <button class="geologica-font">
+          <a href="#about-section">About</a>
+        </button>
+        <button class="geologica-font">
+          <a href="#contact-form">Contact Us</a>
+        </button>
+      </div>
     </div>
   </nav>
   <div class="section-gradient-bar"></div>
@@ -112,8 +119,8 @@
       <input type="email" id="email" class="contact-us-inputfield">
     </div>
     <div class="form-input">
-      <h6>Description</h6>
-      <input type="text" id="description" class="contact-us-inputfield">
+      <h6>Message</h6>
+      <textarea id="description" class="contact-us-inputfield" rows="5"></textarea>
     </div>
     <button class="geologica-font" type="button" id="send-button">Send</button>
   </form>
@@ -129,13 +136,13 @@
       <a href="https://www.facebook.com/profile.php?id=61563265207326" title="Facebook">
         <img src="assets/icons/square-facebook-brands-solid.svg" alt="Facebook" class="social-icon">
       </a>
-      <a href="#" title="Twitter-X">
+      <a href="https://www.x.com/solarcodegr" title="Twitter-X">
         <img src="assets/icons/x-twitter-brands-solid.svg" alt="Twitter X" class="social-icon">
       </a>
       <a href="https://www.instagram.com/solarcodegr/" title="Instagram">
         <img src="assets/icons/instagram-brands-solid.svg" alt="Instagram" class="social-icon">
       </a>
-      <a href="#" title="Linkedin">
+      <a href="https://www.linkedin.com/company/solarcodegr" title="Linkedin">
         <img src="assets/icons/linkedin-brands-solid.svg" alt="Linkedin" class="social-icon">
       </a>
     </div>
@@ -156,6 +163,22 @@
   <script>lucide.createIcons();</script>
   <!-- Load the main JavaScript file -->
   <script type="text/javascript" src="form-handler.js"></script>
+
+  <script>
+    const menuIcon = document.querySelector('.menu-icon');
+    const navMenu = document.querySelector('.nav-menu');
+  
+    menuIcon.addEventListener('click', () => {
+      menuIcon.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+  
+    // Close menu when a link is clicked
+    document.querySelectorAll('.nav-menu button a').forEach(n => n.addEventListener('click', () => {
+      menuIcon.classList.remove('active');
+      navMenu.classList.remove('active');
+    }));
+  </script>
 </body>
 
 </html>

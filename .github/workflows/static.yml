@@ -31,15 +31,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      
-    # Step to set secrets as environment variables
-      - name: Set up environment variables
-        run: |
-          sed -i 's/{{ EMAILJS_PUBLIC_KEY }}/'${{ secrets.EMAILJS_PUBLIC_KEY }}/g' ./emailjs-config.js
-          sed -i 's/{{ EMAILJS_SERVICE_ID }}/'${{ secrets.EMAILJS_SERVICE_ID }}/g' ./emailjs-config.js
-          sed -i 's/{{ EMAILJS_TEMPLATE_ID }}/'${{ secrets.EMAILJS_TEMPLATE_ID }}/g' ./emailjs-config.js
-
-
+        
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
