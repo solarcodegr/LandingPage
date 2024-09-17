@@ -304,6 +304,7 @@ textarea.contact-us-inputfield {
 .navbar {
     width: 100%;
     background-color: white;
+    position: relative;
 }
 
 .navbar-container {
@@ -344,12 +345,11 @@ textarea.contact-us-inputfield {
 /* Updated nav-menu styles */
 .nav-menu {
     display: flex;
-    justify-content: flex-end;
     align-items: center;
 }
 
 .nav-menu button {
-    margin: 0 10px;
+    margin: 10px;
 }
 
 /* Media Queries */
@@ -442,49 +442,22 @@ textarea.contact-us-inputfield {
         display: block;
     }
 
-    /* .nav-menu {
-        position: absolute;
-        left: -100%;
-        top: 80px;
-        flex-direction: column;
-        background-color: white;
-        width: 100%;
-        text-align: center;
-        transition: 0.3s;
-        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
-        padding: 20px 0;
-    } */
-
     /* Modify the mobile nav menu to appear below the navbar */
     .nav-menu {
-        position: relative;
-        /* Make the nav-menu a part of the normal flow */
-        top: 0;
-        /* Align it directly below the navbar */
-        flex-direction: column;
-        background-color: white;
+        position: absolute;
+        top: 100%;
+        left: 0;
         width: 100%;
-        text-align: center;
-        transition: max-height 0.3s ease;
-        /* Smooth opening */
+        background-color: white;
+        flex-direction: column;
+        align-items: center;
         max-height: 0;
-        /* Initially closed */
         overflow: hidden;
-        /* Hide content when closed */
-        padding: 0;
-        /* No extra space when closed */
-        box-shadow: none;
-        /* Remove any shadow */
+        transition: max-height 0.3s ease-out, padding 0.3s ease-out;
     }
 
-    /* .nav-menu.active {
-        left: 0;
-    } */
-
-    /* When active, expand the nav-menu */
     .nav-menu.active {
         max-height: 300px;
-        /* Adjust as needed */
         padding: 20px 0;
     }
 
@@ -492,8 +465,15 @@ textarea.contact-us-inputfield {
         margin: 0.75rem 0;
         width: 80%;
         max-width: 200px;
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: opacity 0.3s ease-out, transform 0.3s ease-out;
     }
-    
+
+    .nav-menu.active button {
+        opacity: 1;
+        transform: translateY(0);
+    }
 
     .menu-icon.active .bar:nth-child(2) {
         opacity: 0;
