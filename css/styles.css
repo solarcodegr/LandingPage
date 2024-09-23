@@ -626,3 +626,11 @@ nav {
 .contact-us {
     padding: 80px 0;
 }
+
+.swal2-custom-confirm-button {
+    background-color: var(--dark-blue);
+}
+
+.swal2-custom-confirm-button:hover {
+    background-color: var(--light-blue);
+}

@@ -16,6 +16,7 @@
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"> </script>
   <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
@@ -107,22 +108,22 @@
     <div class="name">
       <div class="form-input">
         <h6>First Name</h6>
-        <input type="text" id="first-name" class="contact-us-inputfield">
+        <input type="text" id="first-name" class="contact-us-inputfield" required>
       </div>
       <div class="form-input">
         <h6>Last Name</h6>
-        <input type="text" id="last-name" class="contact-us-inputfield">
+        <input type="text" id="last-name" class="contact-us-inputfield" required>
       </div>
     </div>
     <div class="form-input">
       <h6>Email</h6>
-      <input type="email" id="email" class="contact-us-inputfield">
+      <input type="email" id="email" class="contact-us-inputfield" required>
     </div>
     <div class="form-input">
       <h6>Message</h6>
-      <textarea id="description" class="contact-us-inputfield" rows="5"></textarea>
+      <textarea id="description" class="contact-us-inputfield" rows="5" required></textarea>
     </div>
-    <button class="geologica-font" type="button" id="send-button">Send</button>
+    <button class="geologica-font" type="submit" id="send-button">Send</button>
   </form>
   <div class="section-gradient-bar"></div>
   <nav class="footer-class">
