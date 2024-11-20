@@ -498,28 +498,28 @@ export function LandingPage() {
             
             <div className="flex items-center justify-center space-x-6">
               <Link 
-                href="#" 
+                href="https://www.facebook.com/solarcodegr/" 
                 className="text-[#F1F1F1] hover:text-[#05F4C1] transition-colors"
                 aria-label={translation.facebookAria}
               >
                 <Facebook className="w-6 h-6" />
               </Link>
               <Link 
-                href="#" 
+                href="https://x.com/solarcodegr" 
                 className="text-[#F1F1F1] hover:text-[#05F4C1] transition-colors"
                 aria-label={translation.twitterAria}
               >
                 <Twitter className="w-6 h-6" />
               </Link>
               <Link 
-                href="#" 
+                href="https://www.instagram.com/solarcodegr/" 
                 className="text-[#F1F1F1] hover:text-[#05F4C1] transition-colors"
                 aria-label={translation.instagramAria}
               >
                 <Instagram className="w-6 h-6" />
               </Link>
               <Link 
-                href="#" 
+                href="https://www.linkedin.com/company/solarcodegr" 
                 className="text-[#F1F1F1] hover:text-[#05F4C1] transition-colors"
                 aria-label={translation.linkedinAria}
               >
