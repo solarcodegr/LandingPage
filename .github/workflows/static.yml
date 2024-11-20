@@ -31,6 +31,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      # Change directory to the subdirectory where your project is
+      - name: Change to project directory
+        run: cd solarcode-app
       - name: Detect package manager
         id: detect-package-manager
         run: |
