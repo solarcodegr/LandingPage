@@ -28,16 +28,16 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./solarcode-app # Set the default working directory for all steps
     steps:
       - name: Checkout
         uses: actions/checkout@v4
       # Change directory to the subdirectory where your project is
-      - name: Change to project directory
-        run: cd solarcode-app
       - name: Detect package manager
         id: detect-package-manager
         run: |
-          run: cd solarcode-app
           if [ -f "${{ github.workspace }}/yarn.lock" ]; then
             echo "manager=yarn" >> $GITHUB_OUTPUT
             echo "command=install" >> $GITHUB_OUTPUT
