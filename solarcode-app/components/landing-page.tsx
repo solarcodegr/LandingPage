@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Zap, Shield, Activity, Box, ShoppingBag, Building, Facebook, Twitter, Instagram, Linkedin, Cpu, Globe } from 'lucide-react'
@@ -8,6 +8,7 @@ import Image from "next/image"
 import emailjs from '@emailjs/browser'
 import { enTranslations } from '@/app/translations/en'
 import { elTranslations } from '@/app/translations/el'
+import { useRouter } from 'next/navigation'
 
 export function LandingPage() {
   const [name, setName] = useState('')
@@ -27,6 +28,30 @@ export function LandingPage() {
     setTranslation(language === 'en' ? enTranslations : elTranslations)
     localStorage.setItem('language', language) // Save language to localStorage whenever it changes
   }, [language])
+
+  const router = useRouter()
+  const aboutRef = useRef<HTMLElement>(null)
+  const contactRef = useRef<HTMLElement>(null)
+  const learnMoreRef = useRef<HTMLElement>(null)
+
+  const scrollToSection = (ref: React.RefObject<HTMLElement>) => {
+    ref.current?.scrollIntoView({ behavior: 'smooth' })
+  }
+
+  const handleGetStarted = () => {
+    router.push('/under-construction')
+  }
+
+    // Navigation links in the header
+    const handleAboutClick = (e: React.MouseEvent) => {
+      e.preventDefault()
+      scrollToSection(aboutRef)
+    }
+  
+    const handleContactClick = (e: React.MouseEvent) => {
+      e.preventDefault()
+      scrollToSection(contactRef)
+    }
 
   const handleSubmit = async (e: any) => {
     e.preventDefault()
@@ -88,7 +113,7 @@ export function LandingPage() {
 
       {/* Scattered Dots for Hero */}
       <div className="absolute inset-0 z-0">
-        {[...Array(30)].map((_, i) => (
+        {[...Array(500)].map((_, i) => (
           <div
             key={i}
             className="absolute w-1 h-1 bg-white/20 rounded-full"
@@ -116,14 +141,27 @@ export function LandingPage() {
             </div>
             
             <div className="flex items-center space-x-8">
-              <Link className="text-[#F1F1F1] hover:text-[#05F4C1] transition-colors text-lg font-medium" href="/about">
+              <button 
+                onClick={handleAboutClick}
+                className="text-[#F1F1F1] hover:text-[#05F4C1] transition-colors text-lg font-medium"
+              >
                 {translation.about}
-              </Link>
-              <Link className="text-[#F1F1F1] hover:text-[#05F4C1] transition-colors text-lg font-medium" href="/contact">
+              </button>
+              {/* <Link className="text-[#F1F1F1] hover:text-[#05F4C1] transition-colors text-lg font-medium" href="/about">
+                {translation.about}
+              </Link> */}
+              <button
+                onClick={handleContactClick}
+                className="text-[#F1F1F1] hover:text-[#05F4C1] transition-colors text-lg font-medium"
+              >
                 {translation.contact}
-              </Link>
+              </button>
+              {/* <Link className="text-[#F1F1F1] hover:text-[#05F4C1] transition-colors text-lg font-medium" href="/contact">
+                {translation.contact}
+              </Link> */}
               <Button 
                 className="bg-[#05F4C1] text-[#06044B] hover:bg-[#05F4C1]/90 rounded-md text-lg px-6 py-3"
+                onClick={handleGetStarted}
               >
                 {translation.getStarted}
               </Button>
@@ -151,6 +189,7 @@ export function LandingPage() {
             <Button 
               size="lg"
               className="bg-[#F1F1F1] text-[#06044B] hover:bg-[#F1F1F1]/90 text-lg px-8 rounded-md"
+              onClick={handleGetStarted}
             >
               {translation.getStarted}
             </Button>
@@ -158,6 +197,7 @@ export function LandingPage() {
               variant="outline" 
               size="lg"
               className="bg-[#06044B]/40 text-[#F1F1F1] hover:bg-[#06044B]/60 border-none text-lg px-8 rounded-md"
+              onClick={() => scrollToSection(learnMoreRef)}
             >
               {translation.learnMore}
             </Button>
@@ -166,7 +206,7 @@ export function LandingPage() {
       </main>
 
       {/* Solutions Section */}
-      <section className="relative z-10 bg-[#F1F1F1] py-24">
+      <section ref={aboutRef} className="relative z-10 bg-[#F1F1F1] py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -230,7 +270,7 @@ export function LandingPage() {
       </section>
 
       {/* Power of Solarcode Section */}
-      <section className="relative bg-[#06044B] py-24 overflow-hidden font-geologica">
+      <section ref={learnMoreRef} className="relative bg-[#06044B] py-24 overflow-hidden font-geologica">
         {/* Grid Background */}
         <div 
           className="absolute inset-0 z-0" 
@@ -245,7 +285,7 @@ export function LandingPage() {
 
         {/* Scattered Dots */}
         <div className="absolute inset-0 z-0">
-          {[...Array(30)].map((_, i) => (
+          {[...Array(500)].map((_, i) => (
             <div
               key={i}
               className="absolute w-1 h-1 bg-white/20 rounded-full"
@@ -352,7 +392,7 @@ export function LandingPage() {
       </section>
 
       {/* Contact Us Section */}
-      <section className="relative bg-[#F1F1F1] py-24 overflow-hidden font-geologica">
+      <section ref={contactRef} className="relative bg-[#F1F1F1] py-24 overflow-hidden font-geologica">
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-20">
             <h2 className="text-4xl md:text-5xl font-bold text-[#06044B] mb-6">
@@ -427,6 +467,20 @@ export function LandingPage() {
             backgroundSize: 'calc(100vw / 7) calc(100vw / 7)'
           }}
         />
+
+      <div className="absolute inset-0 z-0">
+        {[...Array(300)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute w-1 h-1 bg-white/20 rounded-full"
+            style={{
+              top: `${Math.random() * 100}%`,
+              left: `${Math.random() * 100}%`,
+              animation: `twinkle ${Math.random() * 2 + 1}s infinite`
+            }}
+          />
+        ))}
+      </div>
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="flex flex-col items-center justify-center space-y-8">
