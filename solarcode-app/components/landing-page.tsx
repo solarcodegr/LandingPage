@@ -3,8 +3,7 @@
 import { useState, useEffect, useRef } from 'react'
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Zap, Shield, Activity, Box, ShoppingBag, Building, Facebook, Twitter, Instagram, Linkedin, Cpu, Globe } from 'lucide-react'
-import Image from "next/image"
+import { Zap, Shield, Activity, Facebook, Twitter, Instagram, Linkedin, Cpu, Globe } from 'lucide-react'
 import emailjs from '@emailjs/browser'
 import { enTranslations } from '@/app/translations/en'
 import { elTranslations } from '@/app/translations/el'
@@ -66,6 +65,7 @@ export function LandingPage() {
       setEmail('')
       setMessage('')
     } catch (error) {
+      console.error(error)
       setName('')
       setEmail('')
       setMessage('')
@@ -113,7 +113,7 @@ export function LandingPage() {
 
       {/* Scattered Dots for Hero */}
       <div className="absolute inset-0 z-0">
-        {[...Array(500)].map((_, i) => (
+        {[...Array(800)].map((_, i) => (
           <div
             key={i}
             className="absolute w-1 h-1 bg-white/20 rounded-full"
@@ -131,7 +131,7 @@ export function LandingPage() {
         <div className="container mx-auto px-4">
           <div className="flex h-24 items-center justify-between">
             <div className="flex items-center space-x-2 mt-4">
-              <Image
+              <img
                 src="/images/LOGO_solarcode_white_horizontal.png"
                 alt={translation.logoAlt}
                 width={180}
@@ -285,7 +285,7 @@ export function LandingPage() {
 
         {/* Scattered Dots */}
         <div className="absolute inset-0 z-0">
-          {[...Array(500)].map((_, i) => (
+          {[...Array(800)].map((_, i) => (
             <div
               key={i}
               className="absolute w-1 h-1 bg-white/20 rounded-full"
@@ -317,21 +317,17 @@ export function LandingPage() {
                 <p className="text-white/70 text-lg">
                   {translation.manufacturingEfficiencyDescription}
                 </p>
-                <Link 
-                  href="#" 
-                  className="inline-flex items-center text-[#05F4C1] hover:text-[#05F4C1]/80 transition-colors"
-                >
-                  {translation.enhanceProductivity} →
-                </Link>
               </div>
               <div className="md:w-1/2 relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-[#05F4C1]/20 to-[#0086FF]/20 rounded-2xl filter blur-xl"></div>
-                <div className="bg-black/40 rounded-2xl p-8 backdrop-blur-sm border border-white/10 relative">
-                  <div className="relative h-48 flex items-center justify-center">
-                    <div className="w-20 h-20 border-2 border-[#05F4C1] rounded-xl flex items-center justify-center bg-[#06044B]">
-                      <Box className="w-10 h-10 text-[#05F4C1]" />
-                    </div>
-                  </div>
+                <div className="relative rounded-2xl overflow-hidden">
+                  <img
+                    src="/images/space.png"
+                    alt="Retail Transformation"
+                    width={500}
+                    height={300}
+                    className="w-full h-auto"
+                  />
                 </div>
               </div>
             </div>
@@ -343,38 +339,28 @@ export function LandingPage() {
                 <p className="text-white/70 text-lg">
                   {translation.retailTransformationDescription}
                 </p>
-                <Link 
-                  href="#" 
-                  className="inline-flex items-center text-[#05F4C1] hover:text-[#05F4C1]/80 transition-colors"
-                >
-                  {translation.transformRetail} →
-                </Link>
               </div>
               <div className="md:w-1/2 relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-[#05F4C1]/20 to-[#0086FF]/20 rounded-2xl filter blur-xl"></div>
-                <div className="bg-black/40 rounded-2xl p-8 backdrop-blur-sm border border-white/10 relative">
-                  <div className="relative h-48 flex items-center justify-center">
-                    <div className="w-20 h-20 border-2 border-[#05F4C1] rounded-xl flex items-center justify-center bg-[#06044B]">
-                      <ShoppingBag className="w-10 h-10 text-[#05F4C1]" />
-                    </div>
-                  </div>
+                <div className="relative rounded-2xl overflow-hidden">
+                  <img
+                    src="/images/money.png"
+                    alt="Manufacturing Efficiency"
+                    width={500}
+                    height={300}
+                    className="w-full h-auto"
+                  />
                 </div>
               </div>
             </div>
 
-            {/* Smart Urban Solutions */}
+            {/* Smart Urban Solutions
             <div className="flex flex-col md:flex-row items-center justify-between gap-12">
               <div className="md:w-1/2 space-y-4">
                 <h3 className="text-3xl font-bold text-white">{translation.smartUrbanSolutions}</h3>
                 <p className="text-white/70 text-lg">
                   {translation.smartUrbanSolutionsDescription}
                 </p>
-                <Link 
-                  href="#" 
-                  className="inline-flex items-center text-[#05F4C1] hover:text-[#05F4C1]/80 transition-colors"
-                >
-                  {translation.exploreSolutions} →
-                </Link>
               </div>
               <div className="md:w-1/2 relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-[#05F4C1]/20 to-[#0086FF]/20 rounded-2xl filter blur-xl"></div>
@@ -386,7 +372,7 @@ export function LandingPage() {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
@@ -484,7 +470,7 @@ export function LandingPage() {
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="flex flex-col items-center justify-center space-y-8">
-            <Image
+            <img
               src="/images/LOGO_solarcode_white_vertical.png"
               alt={translation.logoAlt}
               width={150}
